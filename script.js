@@ -186,12 +186,8 @@ function updatePhysics() {
                 0.1,
                 1 - distFromOrigin / (config.maxDisplacement * 2)
             );
-            particle.velocityX +=
-                force * Math.cos(angle) * config.forceStrength
-            forceMultiplier;
-            particle.velocityY +=
-                force * Math.sin(angle) * config.forceStrength
-            forceMultiplier;
+            particle.velocityX += force * Math.cos(angle) * config.forceStrength * forceMultiplier;
+particle.velocityY += force * Math.sin(angle) * config.forceStrength * forceMultiplier;
 
         }
         particle.velocityX *= 0.82;
@@ -202,7 +198,7 @@ function updatePhysics() {
             particle.velocityX +
             (particle.originalX - currentX) * config.returnForce;
         const targetY =
-            currentY
+            currentY +
         particle.velocityY +
             (particle.originalY - currentY) * config.returnForce;
 
@@ -217,7 +213,7 @@ function updatePhysics() {
             const dampedScale = scale + (1 - scale) * Math.exp(-excess *
                 0.02);
 
-            positionArray[i * 2] = particle.originalX + offsetX
+            positionArray[i * 2] = particle.originalX + offsetX *
             dampedScale;
             positionArray[i * 2 + 1] = particle.originalY + offsetY *
                 dampedScale;
