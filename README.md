@@ -1,12 +1,12 @@
-# Icons Move Into Place
+# Interactive Particles Logo
 
-A small interactive microproject that animates icons and text as you scroll.
+A small interactive microproject that applies shader-based hover effects to create dynamic particle animations.
 
 ## What it does
-- Uses GSAP + ScrollTrigger for scroll-driven motion
-- Animates a set of icons into position
-- Fades and reveals text segments during the scroll sequence
-- Includes a smooth Lenis-based scrolling experience
+- Creates custom hover effects using WebGL shaders
+- Applies particle distortion on mouse interaction
+- Uses vanilla JavaScript for event handling
+- Renders smooth, performant animations with GLSL shaders
 
 ## Run locally
 1. Install dependencies:
@@ -16,13 +16,14 @@ A small interactive microproject that animates icons and text as you scroll.
 
 ## Project files
 - index.html — page structure
-- styles.css — layout and animation styling
-- script.js — scroll animation logic
-- public/ — icons and assets
+- styles.css — layout and styling
+- script.js — shader initialization and event handling
+- shaders/ — vertex and fragment shaders
+- public/ — assets
 
 ## Tech stack
 - HTML
 - CSS
-- JavaScript
-- GSAP
-- Lenis
+- JavaScript (Vanilla)
+- WebGL
+- GLSL
